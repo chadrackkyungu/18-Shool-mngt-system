@@ -1,0 +1,4 @@
+
+
+1. 1 NOTE:  The redux that u see is for it is for all those type action that you have into your application
+==========================================================================================================
