@@ -1,0 +1,13 @@
+
+
+1. 1 NOTE:  The redux that u see is for it is for all those type action that you have into your application
+==========================================================================================================
+
+//=> npm install firebase
+
+Note to reset the password go to firebese under template and do the settings
+
+
+
+packeage json remove
+"firebase": "^8.10.1",
