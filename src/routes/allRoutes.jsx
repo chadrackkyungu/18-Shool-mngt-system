@@ -115,6 +115,7 @@ import PagesDirectory from "../pages/Utility/PagesDirectory"
 // import FileUpload from "../components/FileUpload"
 import FileUpload2 from "../pages/FileUpload/fileUpload"
 import SiteHome from "../pages/SiteHome/SiteHome"
+import Admin from "../pages/Admin/admin"
 
 const userRoutes = [
   { path: "/dashboard", component: Dashboard },
@@ -123,6 +124,7 @@ const userRoutes = [
   // { path: "/fileUpload", component: FileUpload },
   { path: "/file-upload", component: FileUpload2 },
   { path: "/site-home", component: SiteHome },
+  { path: "/admin", component: Admin },
 
   //Email
   // { path: "/email-inbox", component: EmailInbox },

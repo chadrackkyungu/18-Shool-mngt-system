@@ -32,6 +32,7 @@ const NotificationDropdown = props => {
             <Row className="align-items-center">
               <Col>
                 <h6 className="m-0 font-size-16">
+                  {" "}
                   {props.t("Notifications")} (258)
                 </h6>
               </Col>

@@ -1,5 +1,5 @@
 import React, { useState } from "react"
-import PropTypes from "prop-types"
+import PropTypes from 'prop-types'
 import { Link } from "react-router-dom"
 import { Dropdown, DropdownToggle, DropdownMenu, Row, Col } from "reactstrap"
 import SimpleBar from "simplebar-react"
@@ -8,6 +8,7 @@ import SimpleBar from "simplebar-react"
 import { withTranslation } from "react-i18next"
 
 const NotificationDropdown = props => {
+  // Declare a new state variable, which we'll call "menu"
   const [menu, setMenu] = useState(false)
 
   return (
@@ -31,9 +32,7 @@ const NotificationDropdown = props => {
           <div className="p-3">
             <Row className="align-items-center">
               <Col>
-                <h6 className="m-0 font-size-16">
-                  {props.t("Notifications")} (258)
-                </h6>
+                <h6 className="m-0 font-size-16"> {props.t("Notifications")} (258)</h6>
               </Col>
             </Row>
           </div>
@@ -51,7 +50,7 @@ const NotificationDropdown = props => {
                   <div className="font-size-12 text-muted">
                     <p className="mb-1">
                       Dummy text of the printing and typesetting industry.
-                    </p>
+                      </p>
                   </div>
                 </div>
               </div>
@@ -83,7 +82,7 @@ const NotificationDropdown = props => {
                   <div className="font-size-12 text-muted">
                     <p className="mb-1">
                       It is a long established fact that a reader will
-                    </p>
+                      </p>
                   </div>
                 </div>
               </div>
@@ -100,7 +99,7 @@ const NotificationDropdown = props => {
                   <div className="font-size-12 text-muted">
                     <p className="mb-1">
                       Dummy text of the printing and typesetting industry.
-                    </p>
+                      </p>
                   </div>
                 </div>
               </div>
@@ -127,7 +126,8 @@ const NotificationDropdown = props => {
               to="#"
             >
               <i className="mdi mdi-arrow-right-circle me-1"></i>
-              {props.t("View all")}
+              {" "}
+              {props.t("View all")}{" "}
             </Link>
           </div>
         </DropdownMenu>
@@ -139,5 +139,5 @@ const NotificationDropdown = props => {
 export default withTranslation()(NotificationDropdown)
 
 NotificationDropdown.propTypes = {
-  t: PropTypes.any,
+  t: PropTypes.any
 }

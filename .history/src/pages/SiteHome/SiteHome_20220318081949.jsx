@@ -10,6 +10,7 @@ import {
 } from "reactstrap"
 
 import Breadcrumbs from "../../components/Common/Breadcrumb"
+
 import { useAuth } from '../../Contexts/AuthContext';
 import avatar from "../../assets/images/users/user-1.jpg"
 
@@ -28,9 +29,9 @@ function SiteHome() {
         </MetaTags>
         <Container fluid={true}>
           <Breadcrumbs
-            maintitle="Dashboard"
-            title="School Management"
-            breadcrumbItem="Home"
+            maintitle="School Management"
+            title="Home"
+            breadcrumbItem="Site-Home"
           />
           <Row>
             <Col className="xl-col-8 sm-col-12 mt-5 flex-md-column">
@@ -91,6 +92,9 @@ function SiteHome() {
               </Card>
             </Col>
           </Row>
+
+
+
         </Container>
       </div>
     </React.Fragment>

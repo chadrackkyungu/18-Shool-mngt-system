@@ -18,6 +18,7 @@ import { Link } from "react-router-dom"
 
 // Custom Scrollbar
 import SimpleBar from "simplebar-react"
+import Courses from "../Courses/Courses"
 
 // import images
 import servicesIcon1 from "../../assets/images/services-icon/01.png"
@@ -44,12 +45,17 @@ import "chartist/dist/scss/chartist.scss"
 
 //i18n
 import { withTranslation } from "react-i18next"
+import { useAuth } from "../../Contexts/AuthContext"
 
 const Dashboard = props => {
   const [menu, setMenu] = useState(false)
   const toggle = () => {
     setMenu(!menu)
   }
+
+  const { currentUser } = useAuth()
+  const { uid, email, displayName, photoURL } = currentUser
+
   return (
     <React.Fragment>
       <div className="page-content">
@@ -97,11 +103,45 @@ const Dashboard = props => {
               </Col> */}
             </Row>
           </div>
+
           <Row>
-            {/* <Col xl={3} md={6}>
-              <Card className="mini-stat bg-primary text-white">
+            <Col lg="12">
+              <Card>
                 <CardBody>
-                  <div className="mb-4">
+                  <div className="d-flex" data-aos="zoom-out-right">
+                    <div className="ms-3">
+                      {photoURL ? (
+                        <img
+                          src={photoURL}
+                          alt=""
+                          className="avatar-md rounded-circle img-thumbnail"
+                        />
+                      ) : (
+                        <img
+                          src="https://cdn.pixabay.com/photo/2020/07/01/12/58/icon-5359553_1280.png"
+                          alt=""
+                          className="avatar-md rounded-circle img-thumbnail"
+                        />
+                      )}
+                    </div>
+                    <div className="align-self-center flex-1 px-3">
+                      <div className="text-muted">
+                        <h5>{displayName}</h5>
+                        <p className="mb-1">{email}</p>
+                        <p className="mb-0">Id no: #{uid}</p>
+                      </div>
+                    </div>
+                  </div>
+                </CardBody>
+              </Card>
+            </Col>
+          </Row>
+
+          <Row>
+            <Col xl={3} md={6}>
+              <Card className="mini-stat .bg-warning text-white">
+                <CardBody>
+                  <div className="mb-4" data-aos={"fade-left"}>
                     <div className="float-start mini-stat-img me-4">
                       <img src={servicesIcon1} alt="" />
                     </div>
@@ -116,7 +156,7 @@ const Dashboard = props => {
                       <p className="mb-0">+ 12%</p>
                     </div>
                   </div>
-                  <div className="pt-2">
+                  <div className="pt-2" data-aos={"fade-right"}>
                     <div className="float-end">
                       <Link to="#" className="text-white-50">
                         <i className="mdi mdi-arrow-right h5"></i>
@@ -130,7 +170,7 @@ const Dashboard = props => {
             <Col xl={3} md={6}>
               <Card className="mini-stat bg-primary text-white">
                 <CardBody>
-                  <div className="mb-4">
+                  <div className="mb-4" data-aos={"fade-left"}>
                     <div className="float-start mini-stat-img me-4">
                       <img src={servicesIcon2} alt="" />
                     </div>
@@ -145,7 +185,7 @@ const Dashboard = props => {
                       <p className="mb-0">- 28%</p>
                     </div>
                   </div>
-                  <div className="pt-2">
+                  <div className="pt-2" data-aos={"fade-right"}>
                     <div className="float-end">
                       <Link to="#" className="text-white-50">
                         <i className="mdi mdi-arrow-right h5"></i>
@@ -156,7 +196,8 @@ const Dashboard = props => {
                   </div>
                 </CardBody>
               </Card>
-            </Col> */}
+            </Col>
+
             <Col xl={3} md={6}>
               <Card className="mini-stat bg-primary text-white">
                 <CardBody>
@@ -801,6 +842,7 @@ const Dashboard = props => {
               </Card>
             </Col>
           </Row> */}
+          <Courses />
         </Container>
       </div>
     </React.Fragment>

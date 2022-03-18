@@ -28,9 +28,9 @@ function SiteHome() {
         </MetaTags>
         <Container fluid={true}>
           <Breadcrumbs
-            maintitle="Dashboard"
-            title="School Management"
-            breadcrumbItem="Home"
+            maintitle="School Management"
+            title="Home"
+            breadcrumbItem="Site-Home"
           />
           <Row>
             <Col className="xl-col-8 sm-col-12 mt-5 flex-md-column">
