@@ -1,5 +1,5 @@
 import usFlag from "../assets/images/flags/us.jpg"
-import france from "../assets/images/flags/french.jpg"
+import france from "../assets/images/flags/italy.jpg"
 
 const languages = {
   sp: {
